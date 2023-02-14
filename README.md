@@ -1,15 +1,21 @@
-<p>cara clone project Resh API laravel</p>
--      git clone https://github.com/NasDev07/Resh-API-laravel-9.git
-<p>masuk ke folder project</p>
--      cd nama file
-<p>install composer</p>
--      composer install
+# Cara Clone Project Resh API Laravel 9
 
-<p> Hasil dari postman </p>
-https://user-images.githubusercontent.com/71059706/218656941-c19b41e8-5fff-4d8c-ab8f-97507735433f.png
+### Ketik di terminal 
+```
+git clone https://github.com/NasDev07/Resh-API-laravel-9.git
+```
 
+### masuk ke folder project
+```
+cd nama folder
+```
 
-<p> jika kamu bidung cara clone kunjugi YouTube : https://youtu.be/VOrDcsPlKzQ </p>
+### Install Composer
+```
+composer install
+```
+
+jika kamu bidung cara clone kunjugi YouTube : https://youtu.be/VOrDcsPlKzQ
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
