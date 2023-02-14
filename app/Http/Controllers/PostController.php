@@ -53,21 +53,6 @@ class PostController extends Controller
         return new PostDetailResource($post->loadMissing('writer:id,username'));
     }
 
-    // public function update(Request $request, $id)
-    // {
-    //     $validated = $request->validate([
-    //         'title' => 'required|max:255',
-    //         'news_content' => 'required',
-    //     ]);
-
-    //     // update file
-
-
-    //     $post = Post::findOrFail($id);
-    //     $post->update($request->all());
-
-    //     return new PostDetailResource($post->loadMissing('writer:id,username'));
-    // }
     public function update(Request $request, $id)
     {
         $validated = $request->validate([
@@ -75,28 +60,10 @@ class PostController extends Controller
             'news_content' => 'required',
         ]);
 
+        // update file
+
+
         $post = Post::findOrFail($id);
-
-        // upload file if exists
-        if ($request->file) {
-            // delete old image
-            if ($post->image) {
-                Storage::delete('image/' . $post->image);
-            }
-
-            $fileName = $this->generateRandomString();
-            $extension = $request->file->extension();
-            $image = $fileName . '.' . $extension;
-
-            Storage::putFileAs('image', $request->file, $fileName . '.' . $extension);
-
-            $post->image = $image;
-        }
-
-        $post->title = $validated['title'];
-        $post->news_content = $validated['news_content'];
-        $post->save();
-
         $post->update($request->all());
 
         return new PostDetailResource($post->loadMissing('writer:id,username'));
